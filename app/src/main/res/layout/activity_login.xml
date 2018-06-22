@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/icon" />
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/username_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_above="@+id/usercode_layout"
+                android:layout_alignParentStart="true"
+                android:maxLength="20"
+                android:paddingLeft="55dp"
+                android:paddingRight="60dp"></EditText>
+            <!-- android:inputType="number" -->
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@mipmap/ic_perm_identity_black"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/contry_sn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="+62"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+            <!--账号清除-->
+            <Button
+                android:id="@+id/bt_username_clear"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/ic_highlight_off_black"
+                android:visibility="invisible" />
+            <!--账号输入框-->
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/usercode_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_layout"
+            android:layout_marginTop="6dp"
+            android:gravity="center">
+            <!--密码输入框-->
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:paddingLeft="55dp"
+                android:paddingRight="60dp"></EditText>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@mipmap/ic_lock_outline_black" />
+            <!--不可见按钮 -->
+            <Button
+                android:id="@+id/bt_pwd_eye"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/ic_visibility_off_black" />
+            <!--清除按钮 -->
+            <Button
+                android:id="@+id/bt_pwd_clear"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="45dp"
+                android:background="@mipmap/ic_highlight_off_black"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/usercode_layout"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/forgive_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/login"
+            android:layout_below="@id/login"
+            android:background="#00000000"
+            android:text="忘记密码?"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/login"
+            android:layout_below="@id/login"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:text="注册"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
